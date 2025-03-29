@@ -235,7 +235,7 @@ header .container ul li a:hover {
     }
     .leading .container div:first-child {
         flex-basis: 100%;
-        text-align: center;
+/*         text-align: center; */
         transform: translate(0,100%);
     }
     .leading .container div img {
