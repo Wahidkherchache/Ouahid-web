@@ -235,7 +235,7 @@ header .container ul li a:hover {
     }
     .leading .container div:first-child {
         flex-basis: 100%;
-/*         text-align: center; */
+        /* text-align: center; */
         transform: translate(0,100%);
     }
     .leading .container div img {
@@ -304,8 +304,8 @@ header .container ul li a:hover {
     position: absolute;
     top: 21px;
     right: -30px;
-    width: 10%;
-    height: 25%;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: #1787e0;
     animation-name: no9t;
@@ -317,14 +317,53 @@ header .container ul li a:hover {
     position: absolute;
     top: 21px;
     left: -30px;
-    width: 10%;
-    height: 25%;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: #1787e0;
+    z-index: 1;
 }
 .Articles h1:hover {
-    color: #1787e0;
-    border: 2px solid #1787e0;
+    color: white;
+    border: 2px solid white;
+    transition-delay: 1s;
+}
+.Articles h1:hover::before {
+    z-index: -1;
+    animation: right-move 1s linear forwards;
+}
+@keyframes right-move {
+    50% {
+    width: 12px;
+    height: 12px;
+    right: 0;
+    }
+    100% {
+        right: 0;
+        width: 50%;
+        border-radius: 0;
+        height: 100%;
+        top: 0;
+    }
+}
+.Articles h1:hover::after {
+    z-index: -1;
+    animation: left-move 1s linear forwards;
+}
+
+@keyframes left-move {
+    50% {
+        width: 12px;
+        height: 12px;
+        left: 0;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        height: 100%;
+        top: 0;
+    }
 }
 .Articles .boxs img {
     width: 100%;
@@ -395,6 +434,7 @@ header .container ul li a:hover {
     width: fit-content;
     font-size: 30px;
     font-weight: bold;
+    z-index: 1000;
     transition: color 0.4s ease, border 0.4s ease;
 }
 .gallery h1::before {
@@ -402,29 +442,64 @@ header .container ul li a:hover {
     position: absolute;
     top: 21px;
     right: -30px;
-    width: 10%;
-    height: 25%;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: #1787e0;
-    animation-name: no9t;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
+    z-index: -1;
 }
 .gallery h1::after {
     content: "";
     position: absolute;
     top: 21px;
     left: -30px;
-    width: 10%;
-    height: 25%;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: #1787e0;
+    z-index: -1;
 }
 .gallery h1:hover {
-    color: #1787e0;
-    border: 2px solid #1787e0;
+    color: white;
+    border: 2px solid white;
+    transition-delay: 1s;
 }
-.gallery {
+.gallery h1:hover::before {
+    animation: right-move 1s linear forwards;
+}
+@keyframes right-move {
+    50% {
+    /* background-color: #1787e0; */
+    width: 12px;
+    height: 12px;
+    right: 0;
+    }
+    100% {
+        right: 0;
+        width: 50%;
+        border-radius: 0;
+        height: 100%;
+        top: 0;
+    }
+}
+.gallery h1:hover::after {
+    animation: left-move 1s linear forwards;
+}
+
+@keyframes left-move {
+    50% {
+        width: 12px;
+        height: 12px;
+        left: 0;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        height: 100%;
+        top: 0;
+    }
+}.gallery {
     position: relative;
     background-color: var(--color-bage);
     padding-top: 30px;
@@ -457,6 +532,7 @@ header .container ul li a:hover {
     width: fit-content;
     font-size: 30px;
     font-weight: bold;
+    z-index: 1000;
     transition: color 0.4s ease, border 0.4s ease;
 }
 .featurs h1::before {
@@ -464,29 +540,49 @@ header .container ul li a:hover {
     position: absolute;
     top: 21px;
     right: -30px;
-    width: 10%;
-    height: 25%;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: #1787e0;
-    animation-name: no9t;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
+    z-index: -1;
 }
 .featurs h1::after {
     content: "";
     position: absolute;
     top: 21px;
     left: -30px;
-    width: 10%;
-    height: 25%;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: #1787e0;
+    z-index: -1;
 }
 .featurs h1:hover {
-    color: #1787e0;
-    border: 2px solid #1787e0;
+    color: white;
+    border: 2px solid white;
+    transition-delay: 1s;
 }
-.featurs {
+.featurs h1:hover::before {
+    animation: right-move 1s linear forwards;
+}
+@keyframes right-move {
+    50% {
+    /* background-color: #1787e0; */
+    width: 12px;
+    height: 12px;
+    right: 0;
+    }
+    100% {
+        right: 0;
+        width: 50%;
+        border-radius: 0;
+        height: 100%;
+        top: 0;
+    }
+}
+.featurs h1:hover::after {
+    animation: left-move 1s linear forwards;
+}.featurs {
     margin: 40px;
 }
 .featurs .container {
@@ -589,6 +685,7 @@ header .container ul li a:hover {
     width: fit-content;
     font-size: 30px;
     font-weight: bold;
+    z-index: 1000;
     transition: color 0.4s ease, border 0.4s ease;
 }
 .Testimonials h1::before {
@@ -596,29 +693,49 @@ header .container ul li a:hover {
     position: absolute;
     top: 21px;
     right: -30px;
-    width: 7%;
-    height: 25%;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: #1787e0;
-    animation-name: no9t;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
+    z-index: -1;
 }
 .Testimonials h1::after {
     content: "";
     position: absolute;
     top: 21px;
     left: -30px;
-    width: 7%;
-    height: 25%;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: #1787e0;
+    z-index: -1;
 }
 .Testimonials h1:hover {
-    color: #1787e0;
-    border: 2px solid #1787e0;
+    color: white;
+    border: 2px solid white;
+    transition-delay: 1s;
 }
-.Testimonials {
+.Testimonials h1:hover::before {
+    animation: right-move 1s linear forwards;
+}
+@keyframes right-move {
+    50% {
+    /* background-color: #1787e0; */
+    width: 12px;
+    height: 12px;
+    right: 0;
+    }
+    100% {
+        right: 0;
+        width: 50%;
+        border-radius: 0;
+        height: 100%;
+        top: 0;
+    }
+}
+.Testimonials h1:hover::after {
+    animation: left-move 1s linear forwards;
+}.Testimonials {
     position: relative;
     background-color: var(--color-bage);
     padding: 15px;
