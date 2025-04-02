@@ -166,6 +166,18 @@ header .container ul li a:hover {
         flex-direction: column;
     }
 }
+.outher div {
+    position: relative;
+}
+.outher i:last-child {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    cursor: pointer;
+    color: var(--main-color);
+    font-size: 22px;
+}
+
 /* end outer links  */
 /* start leading */
 .leading {
