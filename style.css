@@ -169,13 +169,18 @@ header .container ul li a:hover {
 .outher div {
     position: relative;
 }
-.outher i:last-child {
+.outher #close {
     position: absolute;
     top: -5px;
-    right: -5px;
+    right: 0;
     cursor: pointer;
     color: var(--main-color);
     font-size: 22px;
+}
+@media (min-width: 1100px) {
+    .outher #close {
+        display: none;
+    }
 }
 
 /* end outer links  */
