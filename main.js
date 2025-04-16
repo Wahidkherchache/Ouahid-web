@@ -11,3 +11,10 @@ thehadbotton.onclick = function() {
 clos.onclick = function() {
     thehead.style.display = "none";
 }
+let body = document.getElementById("bod");
+
+body.onclick = function() {
+    if(thehead.style.display === "block"){
+        thehead.style.display = "none";
+    }
+}
